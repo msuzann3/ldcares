@@ -655,29 +655,31 @@ h3 {
 
 .mentor-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0.9rem;
 }
 
 .mentor-card {
   display: grid;
-  grid-template-rows: auto 1fr;
-  overflow: hidden;
+  grid-template-columns: 112px 1fr;
+  gap: 1rem;
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: var(--radius);
+  padding: 1rem;
   box-shadow: 0 8px 30px rgba(31, 40, 51, 0.06);
 }
 
 .mentor-card img {
-  width: 100%;
-  aspect-ratio: 4 / 3;
+  width: 112px;
+  height: 112px;
   object-fit: cover;
+  border-radius: var(--radius);
   background: var(--line);
 }
 
 .mentor-card div {
-  padding: 1rem;
+  padding: 0;
 }
 
 .mentor-card h2 {
@@ -861,9 +863,12 @@ h3 {
     grid-template-columns: 1fr;
   }
 
-  .team-grid,
-  .mentor-grid {
+  .team-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .mentor-grid {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -898,6 +903,15 @@ h3 {
   .action-grid,
   .mentor-grid {
     grid-template-columns: 1fr;
+  }
+
+  .mentor-card {
+    grid-template-columns: 84px 1fr;
+  }
+
+  .mentor-card img {
+    width: 84px;
+    height: 84px;
   }
 
   .person {
