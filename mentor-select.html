@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Select a Mentor | L&D Cares</title>
+    <meta name="description" content="Password-protected L&D Cares mentor selection page for approved mentees.">
+    <meta property="og:title" content="Select a Mentor | L&D Cares">
+    <meta property="og:description" content="Review L&D Cares mentors and submit your mentor preferences.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.ldcares.org/mentor-select.html">
+    <meta property="og:image" content="https://www.ldcares.org/assets/logos/ldcares-logo.png">
+    <meta property="og:image:alt" content="L&D Cares logo">
+    <meta name="robots" content="noindex">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body class="mentor-page">
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <header class="site-header" data-header>
+      <nav class="nav" aria-label="Main navigation">
+        <a class="brand" href="index.html" aria-label="L&D Cares home">
+          <img src="assets/logos/ldcares-logo.png" alt="L&D Cares">
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-menu" data-menu-toggle>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span class="sr-only">Menu</span>
+        </button>
+        <div class="nav-links" id="primary-menu" data-menu>
+          <a href="index.html#about">About</a>
+          <a href="index.html#mentoring">Mentoring</a>
+          <a href="index.html#team">Directors</a>
+          <a href="index.html#connect">Connect</a>
+          <a class="nav-cta" href="https://forms.gle/h5i7tPRRqLxuzNQf6">Join</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="section mentor-access" data-mentor-lock>
+        <div>
+          <p class="section-kicker">Mentor Selection</p>
+          <h1>Choose the mentor you would like to connect with.</h1>
+          <p>Enter the password shared with you after your mentee application was reviewed.</p>
+        </div>
+        <form class="access-form" data-access-form>
+          <label for="mentor-password">Password</label>
+          <div class="password-row">
+            <input id="mentor-password" name="password" type="password" autocomplete="current-password" required>
+            <button class="button primary" type="submit">Unlock</button>
+          </div>
+          <p class="form-note" data-access-message role="status" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section class="mentor-content is-hidden" data-mentor-content>
+        <section class="section mentor-intro">
+          <p class="section-kicker">Available Mentors</p>
+          <h1>Review mentors, then submit your selection.</h1>
+          <p>Choose the person whose experience best matches what you want to work on. If you are open to more than one mentor, use the details box to tell us.</p>
+        </section>
+
+        <section class="section mentor-roster" aria-label="Mentor profiles">
+          <div class="mentor-grid" data-mentor-grid></div>
+        </section>
+
+        <section class="section mentor-request" id="request">
+          <div>
+            <p class="section-kicker">Request Form</p>
+            <h2>Send your mentor preference.</h2>
+            <p>Your request will open as a prepared email to L&D Cares. Please review it, then send it from your email account.</p>
+          </div>
+          <form class="mentor-form" data-mentor-form action="https://script.google.com/macros/s/AKfycbzweu759AEJL8jZWQthOBNUVKwJJNITBjt_kEP7dAgJX-P2Rnlis-C5Lcnbc1xiR0iC/exec">
+            <label for="mentee-name">Your name <span class="required-marker" aria-hidden="true">*</span></label>
+            <input id="mentee-name" name="name" type="text" autocomplete="name" required>
+
+            <label for="mentee-email">Your email address <span class="required-marker" aria-hidden="true">*</span></label>
+            <input id="mentee-email" name="email" type="email" autocomplete="email" required>
+
+            <label for="mentor-choice">Preferred mentor <span class="required-marker" aria-hidden="true">*</span></label>
+            <select id="mentor-choice" name="mentor" required data-mentor-select>
+              <option value="">Select a mentor</option>
+            </select>
+
+            <fieldset>
+              <legend>What would you like support with? <span class="required-marker" aria-hidden="true">*</span></legend>
+              <label><input type="checkbox" name="interest" value="Career transition" data-interest-checkbox> Career transition</label>
+              <label><input type="checkbox" name="interest" value="Leadership development" data-interest-checkbox> Leadership development</label>
+              <label><input type="checkbox" name="interest" value="Learning strategy" data-interest-checkbox> Learning strategy</label>
+              <label><input type="checkbox" name="interest" value="Instructional design" data-interest-checkbox> Instructional design</label>
+              <label><input type="checkbox" name="interest" value="Learning technology" data-interest-checkbox> Learning technology</label>
+              <label><input type="checkbox" name="interest" value="Consulting or entrepreneurship" data-interest-checkbox> Consulting or entrepreneurship</label>
+              <p class="form-note checkbox-message" data-interest-message></p>
+            </fieldset>
+
+            <label for="mentor-details">Tell us more <span class="required-marker" aria-hidden="true">*</span></label>
+            <textarea id="mentor-details" name="details" rows="6" placeholder="Share a little about your goals, current situation, and what you hope to get from mentoring." required></textarea>
+
+            <label class="consent-check">
+              <input type="checkbox" name="consent" value="Yes" required>
+              <span>I understand my information will be shared with my selected mentor so they can contact me. <span class="required-marker" aria-hidden="true">*</span></span>
+            </label>
+
+            <button class="button primary" type="submit">Submit mentor request</button>
+            <p class="form-note" data-form-message role="status" aria-live="polite">Your request will be sent to L&D Cares.</p>
+          </form>
+        </section>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <img src="assets/logos/ldcares-mark.png" alt="">
+      <p>L&D Cares, Inc., is a 501(c)(3) non-profit. Copyright 2026, L&D Cares</p>
+      <a href="privacy-policy.html">Privacy Policy</a>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="mentor-select.js"></script>
+  </body>
+</html>

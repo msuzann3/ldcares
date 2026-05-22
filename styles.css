@@ -422,6 +422,12 @@ h3 {
   color: var(--muted);
 }
 
+.panel-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
 .callout,
 .join,
 .contact {
@@ -564,6 +570,158 @@ h3 {
   font-weight: 850;
 }
 
+.is-hidden {
+  display: none !important;
+}
+
+.mentor-access,
+.mentor-intro,
+.mentor-request {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: clamp(1.5rem, 4vw, 3rem);
+  align-items: start;
+}
+
+.mentor-access h1,
+.mentor-intro h1 {
+  color: var(--ink);
+  font-size: clamp(2.2rem, 4vw, 3.8rem);
+}
+
+.mentor-access p,
+.mentor-intro p,
+.mentor-request p {
+  max-width: 780px;
+  color: var(--muted);
+  font-size: 1.08rem;
+}
+
+.access-form,
+.mentor-form {
+  display: grid;
+  gap: 0.85rem;
+  padding: 1.25rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: 0 8px 30px rgba(31, 40, 51, 0.06);
+}
+
+.access-form label,
+.mentor-form label,
+.mentor-form legend {
+  color: var(--green-dark);
+  font-weight: 850;
+}
+
+.access-form input,
+.mentor-form input,
+.mentor-form select,
+.mentor-form textarea {
+  width: 100%;
+  min-height: 46px;
+  padding: 0.75rem 0.85rem;
+  color: var(--ink);
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  font: inherit;
+}
+
+.mentor-form textarea {
+  resize: vertical;
+}
+
+.password-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.65rem;
+}
+
+.form-note {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.required-marker {
+  color: #b42318;
+}
+
+.mentor-roster {
+  padding-top: 0;
+}
+
+.mentor-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+
+.mentor-card {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  overflow: hidden;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: 0 8px 30px rgba(31, 40, 51, 0.06);
+}
+
+.mentor-card img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  background: var(--line);
+}
+
+.mentor-card div {
+  padding: 1rem;
+}
+
+.mentor-card h2 {
+  font-size: 1.25rem;
+}
+
+.mentor-card p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.mentor-form fieldset {
+  display: grid;
+  gap: 0.55rem;
+  margin: 0;
+  padding: 1rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.mentor-form fieldset label {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  color: var(--ink);
+  font-weight: 650;
+}
+
+.mentor-form .consent-check {
+  display: grid;
+  grid-template-columns: 18px 1fr;
+  gap: 0.65rem;
+  align-items: start;
+  color: var(--ink);
+  font-weight: 650;
+}
+
+.mentor-form input[type="checkbox"],
+.mentor-form .consent-check input {
+  width: 18px;
+  min-height: 18px;
+  accent-color: var(--green);
+}
+
 .join {
   width: min(var(--max), calc(100% - 2rem));
   margin-top: 0;
@@ -634,7 +792,8 @@ h3 {
   .split,
   .mission,
   .team-grid,
-  .feature-grid {
+  .feature-grid,
+  .mentor-grid {
     grid-template-columns: 1fr;
   }
 
@@ -685,16 +844,25 @@ h3 {
   .button {
     width: 100%;
   }
+
+  .panel-actions,
+  .password-row {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 900px) {
   .about,
   .mentoring,
-  .connect {
+  .connect,
+  .mentor-access,
+  .mentor-intro,
+  .mentor-request {
     grid-template-columns: 1fr;
   }
 
-  .team-grid {
+  .team-grid,
+  .mentor-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
@@ -727,7 +895,8 @@ h3 {
 
   .team-grid,
   .value-list,
-  .action-grid {
+  .action-grid,
+  .mentor-grid {
     grid-template-columns: 1fr;
   }
 
