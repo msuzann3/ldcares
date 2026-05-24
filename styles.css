@@ -582,9 +582,26 @@ h3 {
   padding-bottom: 1.5rem;
 }
 
+.form-thanks {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-bottom: clamp(3rem, 6vw, 4.75rem);
+  padding: clamp(1.5rem, 4vw, 2.4rem);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: 0 8px 30px rgba(31, 40, 51, 0.06);
+}
+
 .form-intro h1 {
   color: var(--ink);
   font-size: clamp(2.2rem, 4vw, 3.8rem);
+}
+
+.form-thanks h2 {
+  color: var(--ink);
 }
 
 .form-intro p:not(.section-kicker) {
@@ -593,10 +610,16 @@ h3 {
   font-size: 1.08rem;
 }
 
+.form-thanks p:not(.section-kicker) {
+  max-width: 720px;
+  color: var(--muted);
+  font-size: 1.08rem;
+}
+
 .embedded-form {
   width: min(var(--max), calc(100% - 2rem));
   min-height: 820px;
-  margin: 0 auto clamp(3rem, 6vw, 4.75rem);
+  margin: 0 auto 1.5rem;
   overflow: hidden;
   background: var(--paper);
 }
@@ -850,6 +873,7 @@ h3 {
   .join,
   .contact,
   .form-intro,
+  .form-thanks,
   .site-footer {
     flex-direction: column;
     align-items: flex-start;
