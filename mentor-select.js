@@ -67,7 +67,7 @@ function unlockMentorPage(decryptedMentors) {
     ...additionalMentors.filter(
       (additionalMentor) => !decryptedMentors.some((mentor) => mentor.name === additionalMentor.name)
     )
-  ];
+  ].sort((mentorA, mentorB) => mentorA.name.localeCompare(mentorB.name));
   renderMentors();
   lock?.classList.add("is-hidden");
   content?.classList.remove("is-hidden");
