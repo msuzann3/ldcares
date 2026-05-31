@@ -41,6 +41,18 @@ Open this folder in Codex:
 
 `/Users/michelle/Documents/_AI-Workspace/Codex/LD Cares`
 
+On Dolly's MacBook Air, Codex may still show the previous Google Drive workspace path:
+
+`/Users/dolly/Library/CloudStorage/GoogleDrive-lentz.michelles@gmail.com/My Drive/LD Cares/New WebSite - Codex`
+
+That path is intentionally a symlink to the iCloud workspace:
+
+`/Users/dolly/Library/Mobile Documents/com~apple~CloudDocs/Documents/_AI-Workspace/Codex/LD Cares`
+
+macOS may display the same iCloud folder as:
+
+`/Users/dolly/Documents/_AI-Workspace/Codex/LD Cares`
+
 Useful Git checks:
 
 ```bash
@@ -50,3 +62,7 @@ git push origin main
 ```
 
 If local files and GitHub ever disagree, stop and compare carefully before overwriting anything.
+
+## Handoff Notes
+
+- 2026-05-31: Removed Cindy Huggett from the password-protected mentor selection page by adding her name to `removedMentorNames` in `mentor-select.js`. The encrypted roster data was not regenerated; the page filters her out after decrypting and also filters any older session-storage roster.

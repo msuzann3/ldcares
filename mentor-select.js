@@ -8,6 +8,8 @@ const mentorFormEndpoint = "https://script.google.com/macros/s/AKfycbzweu759AEJL
 
 let mentors = [];
 
+const removedMentorNames = ["Cindy Huggett"];
+
 const additionalMentors = [
   {
     name: "Brandon Carson",
@@ -63,9 +65,11 @@ async function decryptMentors(password) {
 
 function unlockMentorPage(decryptedMentors) {
   mentors = [
-    ...decryptedMentors,
+    ...decryptedMentors.filter((mentor) => !removedMentorNames.includes(mentor.name)),
     ...additionalMentors.filter(
-      (additionalMentor) => !decryptedMentors.some((mentor) => mentor.name === additionalMentor.name)
+      (additionalMentor) =>
+        !removedMentorNames.includes(additionalMentor.name) &&
+        !decryptedMentors.some((mentor) => mentor.name === additionalMentor.name)
     )
   ].sort((mentorA, mentorB) => mentorA.name.localeCompare(mentorB.name));
   renderMentors();
