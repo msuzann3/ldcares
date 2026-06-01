@@ -19,6 +19,13 @@ const additionalMentors = [
   }
 ];
 
+const mentorProfileUpdates = {
+  "LaQuin Taylor": {
+    image: "assets/mentors/laquin-taylor.jpg",
+    bio: "LaQuin Taylor is a Learning and Development Professional with over a decade of experience optimizing L&D functions across global organizations in the healthcare, restaurant and manufacturing industries. She has held roles from Instructional Design Manager to Senior Instructional Designer and currently as a Learning and Organizational Development Manager and is passionate about driving business performance by cultivating high-impact cultures of learning.\n\nWith a strong focus on strategic development, process improvement, and aligning learning initiatives with business goals, LaQuin helps organizations unlock the full potential of their people. She believes the business of learning is powered by people - advocating for teams to become strategic partners and unleash untapped opportunities.\n\nLaQuin holds a B.A. in Communication, an M.S. in Instructional Design and Development, and is a Certified Professional in Training Management (CPTM). She is also committed to creating pathways for other L&D professionals to grow through mentorship, scholarship and community-building.\n\nLaQuin has enjoyed mentoring aspiring Learning and Development professionals for the last 4 years and looks forward to connecting with fellow L&D Cares members!"
+  }
+};
+
 const lock = document.querySelector("[data-mentor-lock]");
 const content = document.querySelector("[data-mentor-content]");
 const accessForm = document.querySelector("[data-access-form]");
@@ -65,7 +72,12 @@ async function decryptMentors(password) {
 
 function unlockMentorPage(decryptedMentors) {
   mentors = [
-    ...decryptedMentors.filter((mentor) => !removedMentorNames.includes(mentor.name)),
+    ...decryptedMentors
+      .filter((mentor) => !removedMentorNames.includes(mentor.name))
+      .map((mentor) => ({
+        ...mentor,
+        ...(mentorProfileUpdates[mentor.name] || {})
+      })),
     ...additionalMentors.filter(
       (additionalMentor) =>
         !removedMentorNames.includes(additionalMentor.name) &&
@@ -87,14 +99,30 @@ function renderMentors() {
   mentors.forEach((mentor) => {
     const card = document.createElement("article");
     card.className = "mentor-card";
-    card.innerHTML = `
-      <img src="${mentor.image}" alt="${mentor.name}">
-      <div>
-        <h2>${mentor.name}</h2>
-        <p class="role">${mentor.role}</p>
-        <p>${mentor.bio}</p>
-      </div>
-    `;
+
+    const image = document.createElement("img");
+    image.src = mentor.image;
+    image.alt = mentor.name;
+
+    const content = document.createElement("div");
+    const name = document.createElement("h2");
+    name.textContent = mentor.name;
+
+    const role = document.createElement("p");
+    role.className = "role";
+    role.textContent = mentor.role;
+
+    content.append(name, role);
+    String(mentor.bio || "")
+      .split(/\n+/)
+      .filter((paragraph) => paragraph.trim())
+      .forEach((paragraph) => {
+        const bio = document.createElement("p");
+        bio.textContent = paragraph.trim();
+        content.append(bio);
+      });
+
+    card.append(image, content);
     mentorGrid.append(card);
 
     const option = document.createElement("option");

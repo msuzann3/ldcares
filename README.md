@@ -2,6 +2,10 @@
 
 This folder contains the LD Cares website project.
 
+Working directory on both Macs:
+
+`/Users/dolly/Library/Mobile Documents/com~apple~CloudDocs/Documents/_AI-Workspace/Codex/LD Cares`
+
 GitHub repository: https://github.com/msuzann3/ldcares
 
 ## Project Notes for Codex
@@ -65,4 +69,5 @@ If local files and GitHub ever disagree, stop and compare carefully before overw
 
 ## Handoff Notes
 
+- 2026-06-01: Updated LaQuin Taylor on the password-protected mentor selection page. `assets/mentors/laquin-taylor.jpg` now uses the new headshot, and `mentor-select.js` applies a post-decryption profile update for her new bio because the encrypted roster data was not regenerated.
 - 2026-05-31: Removed Cindy Huggett from the password-protected mentor selection page by adding her name to `removedMentorNames` in `mentor-select.js`. The encrypted roster data was not regenerated; the page filters her out after decrypting and also filters any older session-storage roster.
