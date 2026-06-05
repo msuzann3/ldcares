@@ -69,5 +69,8 @@ If local files and GitHub ever disagree, stop and compare carefully before overw
 
 ## Handoff Notes
 
+- 2026-06-05: Updated Brandon Carson's bio in both `index.html` Directors section and the password-protected mentor page data in `mentor-select.js`, then published the full 2026-06-05 bio/headshot batch to GitHub Pages.
+- 2026-06-05: Updated Michelle Lentz's Directors headshot on the main page by replacing `assets/directors/michelle-lentz.webp` with the new image from `Michelle-Headshot.png`.
+- 2026-06-05: Updated Suzanne Frawley on the password-protected mentor selection page. `assets/mentors/suzanne-frawley.jpg` now uses the new headshot from `Frawley.png`, and `mentor-select.js` applies a post-decryption profile update for her new bio and credentials because the encrypted roster data was not regenerated.
 - 2026-06-01: Updated LaQuin Taylor on the password-protected mentor selection page. `assets/mentors/laquin-taylor.jpg` now uses the new headshot, and `mentor-select.js` applies a post-decryption profile update for her new bio because the encrypted roster data was not regenerated.
 - 2026-05-31: Removed Cindy Huggett from the password-protected mentor selection page by adding her name to `removedMentorNames` in `mentor-select.js`. The encrypted roster data was not regenerated; the page filters her out after decrypting and also filters any older session-storage roster.

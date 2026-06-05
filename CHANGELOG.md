@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-06-05
+
+- Updated Brandon Carson's bio on both the main page Directors section and the password-protected mentor selection page.
+- Updated Michelle Lentz's Directors headshot on the main page.
+- Updated Suzanne Frawley on the password-protected mentor selection page with the new headshot, credentials, and bio.
+
 ## 2026-06-01
 
 - Updated LaQuin Taylor on the password-protected mentor selection page with the new headshot and bio.
