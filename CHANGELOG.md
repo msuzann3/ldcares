@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-06-06
+
+- Removed the LinkedIn sentence from Suzanne Frawley's password-protected mentor page bio.
+
 ## 2026-06-05
 
 - Updated Brandon Carson's bio on both the main page Directors section and the password-protected mentor selection page.
