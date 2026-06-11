@@ -2,31 +2,51 @@
 
 This folder contains the LD Cares website project.
 
-Working directory on both Macs:
+## Synced Folder Location
+
+This project is shared through iCloud and may be opened from Michelle's MacBook Pro or from the MacBook Air named `dolly`.
+
+The full path may differ before `Documents`, but the project folder should always match from:
+
+`Documents/_AI-Workspace/Codex/LD Cares`
+
+Current MacBook Pro path:
+
+`/Users/michelle/Documents/_AI-Workspace/Codex/LD Cares`
+
+Known iCloud path on `dolly`:
 
 `/Users/dolly/Library/Mobile Documents/com~apple~CloudDocs/Documents/_AI-Workspace/Codex/LD Cares`
 
 GitHub repository: https://github.com/msuzann3/ldcares
 
-## Project Notes for Codex
+## Working Across Laptops
 
-This project may be opened from more than one Mac. Treat GitHub as the source of truth, even if the local folder is synced through iCloud.
+Treat the shared `Documents/_AI-Workspace/Codex/LD Cares` folder as the working location on both Macs. The folder syncs through iCloud, but GitHub should still be used to preserve history and prevent conflicting versions.
 
-Before making changes:
+Avoid editing the same project on two Macs at the same time. If local files and GitHub ever disagree, stop and compare carefully before overwriting anything.
 
-1. Check the current Git status.
-2. Pull the latest changes from `origin/main`.
-3. Review the relevant files before editing.
+## Codex Session Checklist
 
-After making changes:
+At the beginning of every Codex session:
+
+1. Check the current project folder path.
+2. Read `README.md` and `CHANGELOG.md` to understand current status.
+3. Check the current Git status.
+4. Pull the latest changes from `origin/main` when practical.
+5. Review the relevant files before editing.
+
+After making meaningful changes:
 
 1. Test or inspect the changed pages when practical.
-2. Commit the changes with a clear message.
-3. Push to `origin/main` so the other laptop can pick them up.
+2. Update `README.md` with any context that would help a future Codex session or the other laptop understand how to continue safely.
+3. Update `CHANGELOG.md` with a dated entry describing the change.
+4. Commit the changes with a clear message.
+5. Push to `origin/main` so the other laptop can pick them up.
+
+## Project Notes for Codex
 
 When making meaningful edits, update this README with any context that would help a future Codex session or another laptop understand what changed, why it changed, or how to continue safely.
-
-Avoid editing the same project on two Macs at the same time. iCloud may sync files, but GitHub should be used to preserve history and prevent conflicting versions.
 
 ## Main Files
 
@@ -69,6 +89,7 @@ If local files and GitHub ever disagree, stop and compare carefully before overw
 
 ## Handoff Notes
 
+- 2026-06-11: Added cross-laptop continuity notes, including the shared folder rule from `Documents/_AI-Workspace/Codex/LD Cares` onward and a Codex session checklist to read/update `README.md` and `CHANGELOG.md`.
 - 2026-06-06: Removed the LinkedIn sentence from Suzanne Frawley's password-protected mentor page bio in `mentor-select.js`; the encrypted roster data was not regenerated.
 - 2026-06-05: Updated Brandon Carson's bio in both `index.html` Directors section and the password-protected mentor page data in `mentor-select.js`, then published the full 2026-06-05 bio/headshot batch to GitHub Pages.
 - 2026-06-05: Updated Michelle Lentz's Directors headshot on the main page by replacing `assets/directors/michelle-lentz.webp` with the new image from `Michelle-Headshot.png`.

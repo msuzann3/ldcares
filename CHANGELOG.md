@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-06-11
+
+- Added cross-laptop continuity notes to `README.md`, including the shared iCloud folder rule, working-across-laptops guidance, and the Codex session checklist.
+
 ## 2026-06-06
 
 - Removed the LinkedIn sentence from Suzanne Frawley's password-protected mentor page bio.
